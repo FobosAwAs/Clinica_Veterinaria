@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DAOmascota {
 
-    DTOmascota get(DTOmascota dtOmascota) throws ExcepcionDAO;
+    DTOmascota get(DTOmascota dtOmascota);
 
     void insert(DTOmascota dtOmascota) throws ExcepcionDAO;
 

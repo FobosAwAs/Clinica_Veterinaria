@@ -25,7 +25,7 @@ public class DAOmascotaImple implements DAOmascota {
             String insert = "insert into mascota (ID_mascota,nombre,raza, fechaN, ID_celda, ID_cliente) values(?,?,?,?,?,?)";
             jdbcTemplate.update(insert,
                     dtOmascota.getID_mascota(),
-                    dtOmascota.getID_mascota(),
+                    dtOmascota.getNombre(),
                     dtOmascota.getRaza(),
                     dtOmascota.getFechaN(),
                     dtOmascota.getID_celda(),
@@ -66,10 +66,10 @@ public class DAOmascotaImple implements DAOmascota {
     }
 
     @Override
-    public DTOmascota get(DTOmascota dtOmascota) throws ExcepcionDAO {
+    public DTOmascota get(DTOmascota dtOmascota) {
         try {
             String select = "select * from mascota where ID_mascota = ?";
-            return jdbcTemplate.queryForObject(select, new MapperMascota(), dtOmascota);
+            return jdbcTemplate.queryForObject(select, new MapperMascota(), dtOmascota.getID_mascota());
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
