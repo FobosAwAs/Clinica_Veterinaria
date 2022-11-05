@@ -1,6 +1,6 @@
-package src.main.java.com.example.clinicaveterinaria.dto;
+package com.example.clinicaveterinaria.dto;
 
-public class DTOpaciente {
+public class DTOmascota {
 
     private int ID_mascota;
     private String nombre;

@@ -1,4 +1,4 @@
-package src.main.java.com.example.clinicaveterinaria.dto;
+package com.example.clinicaveterinaria.dto;
 
 public class DTOcliente {
 
